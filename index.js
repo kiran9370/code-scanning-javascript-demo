@@ -2,16 +2,29 @@
 <html>
 <body>
 
-<h2>JavaScript Arithmetic</h2>
-<h3>The + Operator</h3>
+<h2>JavaScript Array Sort</h2>
+<p>Sort car objects on age:</p>
 
 <p id="demo"></p>
 
 <script>
-let x = 5;
-let y = 2;
-let z = x + y;
-document.getElementById("demo").innerHTML = z;
+const cars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+
+displayCars();
+
+cars.sort(function(a, b){return a.year - b.year});
+displayCars();
+
+function displayCars() {
+  document.getElementById("demo").innerHTML =
+  cars[0].type + " " + cars[0].year + "<br>" +
+  cars[1].type + " " + cars[1].year + "<br>" +
+  cars[2].type + " " + cars[2].year;
+}
 </script>
 
 </body>
