@@ -1,31 +1,21 @@
-<!DOCTYPE html>
-<html>
-<body>
 
-<h2>JavaScript Array Sort</h2>
-<p>Sort car objects on age:</p>
-
-<p id="demo"></p>
-
-<script>
-const cars = [
-  {type:"Volvo", year:2016},
-  {type:"Saab", year:2001},
-  {type:"BMW", year:2010}
-];
-
-displayCars();
-
-cars.sort(function(a, b){return a.year - b.year});
-displayCars();
-
-function displayCars() {
-  document.getElementById("demo").innerHTML =
-  cars[0].type + " " + cars[0].year + "<br>" +
-  cars[1].type + " " + cars[1].year + "<br>" +
-  cars[2].type + " " + cars[2].year;
-}
-</script>
-
-</body>
-</html>
+<script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}  
+</script>  
+<body>  
+<form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
+Name: <input type="text" name="name"><br/>  
+Password: <input type="password" name="password"><br/>  
+<input type="submit" value="register">  
+</form>  
